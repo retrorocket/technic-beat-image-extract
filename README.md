@@ -1,6 +1,8 @@
 # Technic Beat PS2 `menu/thumb.anm` 抽出ツール
 
-アーケードモードで曲選択するときに表示される、元になったゲームのサムネ画像をフレーム別パレットでPNG化するツールです。
+アーケードモードで曲選択するときに表示される、元になったゲームのサムネ画像をフレーム別パレットでPNG化するツールです。  
+日本版PS2テクニクビート、AC版テクニクビートで動作確認しています。  
+AC版はメディアとセキュリティドングルにそれぞれ別のサムネ用画像 `THUMB` が入っており、ゲーム中に呼び出されるのはドングルに入っている方です。
 
 ## 動作確認した環境
 
@@ -10,9 +12,9 @@ Python 3.10以上。pillowがない場合はインストールしてください
 pip3 install pillow
 ```
 
-## 基本的な使い方
+## 使い方
 
-`technic_beat_thumb_anm_extract.py` と `thumb.anm` を同じフォルダに置いてください。
+`technic_beat_thumb_anm_extract.py` と `thumb.anm` を同じフォルダに置いて、次のコマンドを実行してください。
 
 ```bash
 python3 technic_beat_thumb_anm_extract.py thumb.anm -o extracted --contact-sheet
